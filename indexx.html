@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-7 주전멤버 소개</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background-color: #5c6bc0;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #3949ab;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .info-button {
+      background-color: #3949ab;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .info-button:hover {
+      background-color: #303f9f;
+    }
+    .info-box {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #eef1f5;
+    }
+    .info-box img {
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>3-7 주전멤버를 소개합니다.</h1>
+  </header>
+  <main>
+    <section>
+      <h2>선수들 더 알아보기</h2>
+      <div class="button-group">
+        <button class="info-button" onclick="toggleInfo('조성근')">조성근</button>
+        <button class="info-button" onclick="toggleInfo('성지훈')">성지훈</button>
+        <button class="info-button" onclick="toggleInfo('임강희')">임강희</button>
+        <button class="info-button" onclick="toggleInfo('조윤성')">조윤성</button>
+        <button class="info-button" onclick="toggleInfo('정재석')">정재석</button>
+        <button class="info-button" onclick="toggleInfo('이승환')">이승환</button>
+        <button class="info-button" onclick="toggleInfo('양우진')">양우진</button>
+        <button class="info-button" onclick="toggleInfo('김기연')">김기연</button>
+        <button class="info-button" onclick="toggleInfo('조상혁')">조상혁</button>
+        <button class="info-button" onclick="toggleInfo('이호범')">이호범</button>
+        <button class="info-button" onclick="toggleInfo('이준')">이준</button>
+        <button class="info-button" onclick="toggleInfo('최민준')">최민준</button>
+        <button class="info-button" onclick="toggleInfo('김상현')">김상현</button>
+      </div>
+
+      <!-- 선수 정보는 아래와 같은 형식으로 추가되어야 합니다. 예시는 2명만 표시됨 -->
+      <div id="조성근" class="info-box">
+        3-7반 후방 빌드업의 중심이며 최악의 신체 조건에서 최고의 경기력을 만들어내는 강인한 선수. 낮은 무게 중심을 기반으로 높은 킥이 주특기이며, 높은 축구 지능으로 부족한 속도와 패싱력을 커버하는 선수.
+        <img src="조성근.jpg" alt="조성근 사진">
+      </div>
+      <div id="성지훈" class="info-box">
+        3-7 최고의 노력형 선수. 축구 연습을 가장 많이 하며, 항상 좋은 킥 실력을 보여줌. 큰 키에 맞지 않는 빠른 스피드를 보유한 조커카드 같은 선수.
+        <img src="성지훈.jpg" alt="성지훈 사진">
+      </div>
+
+      <!-- 나머지 선수 정보도 같은 형식으로 작성해 넣을 수 있음 -->
+    </section>
+  </main>
+  <script>
+    function toggleInfo(id) {
+      const target = document.getElementById(id);
+      const allBoxes = document.querySelectorAll('.info-box');
+      allBoxes.forEach(box => {
+        if (box.id !== id) {
+          box.style.display = 'none';
+        }
+      });
+      target.style.display = (target.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
